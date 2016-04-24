@@ -20,7 +20,7 @@
 
         <include
             layout="@layout/activity_item_view"
-            bind:actInfo='@{map["activity_a"]}'
+            bind:actInfo='@{map["change_color"]}'
             bind:clickListener="@{clickListener}"
             />
 

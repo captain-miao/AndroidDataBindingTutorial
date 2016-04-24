@@ -8,6 +8,6 @@ public class SimpleActivityC extends BaseActivity {
 
     @Override
     public void init(Bundle savedInstanceState) {
-        setContentView(R.layout.activity_simle);
+        setContentView(R.layout.activity_simple);
     }
 }
