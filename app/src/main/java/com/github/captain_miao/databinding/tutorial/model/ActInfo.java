@@ -1,0 +1,35 @@
+package com.github.captain_miao.databinding.tutorial.model;
+
+import java.io.Serializable;
+
+/**
+ * @author YanLu
+ * @since 16/4/24
+ */
+public class ActInfo implements Serializable{
+    private static final long serialVersionUID = 1L;
+
+    private String name;
+    private String url;
+
+    public ActInfo(String name, String url) {
+        this.name = name;
+        this.url = url;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+}
