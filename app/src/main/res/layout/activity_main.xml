@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="java.util.Map"/>
+        <import type="com.github.captain_miao.databinding.tutorial.model.ActInfo"/>
+        <import type="com.github.captain_miao.databinding.tutorial.listener.OnViewClickListener"/>
+        <variable name="map" type="Map&lt;String,ActInfo>"/>
+        <variable name="clickListener" type="OnViewClickListener"/>
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.github.captain_miao.databinding.tutorial.MainActivity"
+        android:orientation="vertical">
+
+
+        <include
+            layout="@layout/activity_item_view"
+            bind:actInfo='@{map["activity_a"]}'
+            bind:clickListener="@{clickListener}"
+            />
+
+        <include layout="@layout/activity_item_view"
+                 bind:actInfo='@{map["activity_b"]}'
+                 bind:clickListener="@{clickListener}"
+                 />
+
+        <include layout="@layout/activity_item_view"
+                 bind:actInfo="@{map[`activity_c`]}"
+                 bind:clickListener="@{clickListener}"
+                 />
+    </LinearLayout>
+</layout>
