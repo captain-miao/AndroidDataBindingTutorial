@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.github.captain_miao.databinding.tutorial.databinding.ActivityMainBinding;
-import com.github.captain_miao.databinding.tutorial.helper.Nav;
+import com.github.captain_miao.databinding.tutorial.helper.ActivityNavigation;
 import com.github.captain_miao.databinding.tutorial.listener.OnViewClickListener;
 import com.github.captain_miao.databinding.tutorial.model.ActInfo;
 
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements OnViewClickListen
     public void onClick(View v) {
         if(v instanceof Button) {
             String name = ((Button) v).getText().toString();
-            Nav.from(this).toUri(mActInfoMap.get(name).getUrl());
+            ActivityNavigation.from(this).toUri(mActInfoMap.get(name).getUrl());
         }
     }
 

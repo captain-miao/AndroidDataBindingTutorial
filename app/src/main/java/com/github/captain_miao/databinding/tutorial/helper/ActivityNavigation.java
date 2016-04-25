@@ -7,28 +7,19 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 
-/**
- * Cross-Platform Navigation (based on URI)
- *
- * <p><b>Instance should NEVER be kept, due to possible memory-leak to context.</b></p>
- *
- *  @author Oasis
- */
-public class Nav {
+public class ActivityNavigation {
 
-	/** @param context use current Activity if possible */
-	public static Nav from(final Context context) {
-		return new Nav(context);
+	public static ActivityNavigation from(final Context context) {
+		return new ActivityNavigation(context);
 	}
 
 
-    private Nav(final Context context) {
+    private ActivityNavigation(final Context context) {
    		mContext = context;
    		mIntent = new Intent(Intent.ACTION_VIEW);
    	}
 
-	/** Extras to be put into activity intent. */
-	public Nav withExtras(final Bundle extras) {
+	public ActivityNavigation withExtras(final Bundle extras) {
 		if(extras == null) {
             return this;
         }
@@ -37,15 +28,11 @@ public class Nav {
 		return this;
 	}
 
-	/** Flags to be added to activity intent */
-	public Nav withFlags(final int flags) {
+	public ActivityNavigation withFlags(final int flags) {
 		mIntent.addFlags(flags);
 		return this;
 	}
 
-	/** Start UI component associated with the specific URI.
-	 * @return true if successful, or false if no UI component matches the URI
-	 */
     public boolean toUri(final String uri) {
 
         if (TextUtils.isEmpty(uri))
@@ -55,8 +42,6 @@ public class Nav {
     }
 
 
-	/** Start activity associated with the specific URI. */
-	/** it may return false, when target activity didn't finded, the caller should handler this case */
     public boolean toUri(final Uri uri) {
         final Intent intent = mIntent.setData(uri);
         Log.d(TAG, uri.toString());
@@ -74,5 +59,5 @@ public class Nav {
 	private final Context mContext;
 	private final Intent mIntent;
 
-	private static final String TAG = "Nav";
+	private static final String TAG = "ActivityNavigation";
 }
