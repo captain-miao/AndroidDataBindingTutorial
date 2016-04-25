@@ -5,6 +5,7 @@ DataBinding can do lots of things...
 The following features is presented:
 ```
 Simple usage in Activity(clickListener,map)
+load image
 //Usage in Recyclerview
 //Observable implementation
 //Formatting with Imports

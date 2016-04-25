@@ -25,7 +25,7 @@
             />
 
         <include layout="@layout/activity_item_view"
-                 bind:actInfo='@{map["activity_b"]}'
+                 bind:actInfo='@{map["change_image"]}'
                  bind:clickListener="@{clickListener}"
                  />
 

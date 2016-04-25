@@ -25,7 +25,6 @@ public class SimpleActivityA extends BaseActivity implements View.OnClickListene
     @Override
     public void onClick(View v) {
         mBinding.setTxtColor(getRandomColor());
-        mBinding.setVariable(BR.txtColor, getRandomColor());
     }
 
 
