@@ -25,7 +25,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:scaleType="centerInside"
-            app:imageUrl='@{imgUrl ?? "http://ww1.sinaimg.cn/large/7a8aed7bjw1f2zwrqkmwoj20f00lg0v7.jpg"}'/>
+            android:clickable="false"
+            app:imageUrl='@{imgUrl ?? "http://ww1.sinaimg.cn/large/7a8aed7bjw1f2zwrqkmwoj20f00lg0v7.jpg"}'
+            app:error="@{@drawable/ic_image_load_error}"
+            />
 
     </LinearLayout>
 </layout>
