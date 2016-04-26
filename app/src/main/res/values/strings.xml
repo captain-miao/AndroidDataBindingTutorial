@@ -2,5 +2,5 @@
     <string name="app_name">DataBinding</string>
     <string name="Activity_A">Activity A</string>
     <string name="Activity_B">Activity B</string>
-    <string name="Activity_C">Activity C</string>
+    <string name="Activity_C">Fragment C</string>
 </resources>
