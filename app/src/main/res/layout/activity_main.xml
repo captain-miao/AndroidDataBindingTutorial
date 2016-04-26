@@ -30,7 +30,7 @@
                  />
 
         <include layout="@layout/activity_item_view"
-                 bind:actInfo="@{map[`activity_c`]}"
+                 bind:actInfo="@{map[`with_fragment`]}"
                  bind:clickListener="@{clickListener}"
                  />
     </LinearLayout>

@@ -46,6 +46,6 @@ public class MainActivity extends AppCompatActivity implements OnViewClickListen
     private Map<String, ActInfo> mActInfoMap = new HashMap<String, ActInfo>() {{
         put("change_color", new ActInfo("change_color", "tutorial://databinding/activity_a"));
         put("change_image", new ActInfo("change_image", "tutorial://databinding/activity_b"));
-        put("activity_c", new ActInfo("activity_c", "tutorial://databinding/activity_c"));
+        put("with_fragment", new ActInfo("with_fragment", "tutorial://databinding/activity_c"));
     }};
 }
