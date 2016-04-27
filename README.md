@@ -11,3 +11,8 @@ Data binding in Recyclerview
 //Observable implementation
 
 ```
+
+### Data binding in Recyclerview 
+![data-binding-recycle-view](https://raw.githubusercontent.com/captain-miao/me.github.com/master/databinding/data-binding-recycle-view.gif "data-binding-recycle-view")
+
+<br/>
