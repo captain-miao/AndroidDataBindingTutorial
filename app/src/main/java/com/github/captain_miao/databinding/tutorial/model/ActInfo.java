@@ -1,12 +1,10 @@
 package com.github.captain_miao.databinding.tutorial.model;
 
-import java.io.Serializable;
-
 /**
  * @author YanLu
  * @since 16/4/24
  */
-public class ActInfo implements Serializable{
+public class ActInfo extends BaseModel{
     private static final long serialVersionUID = 1L;
 
     private String name;

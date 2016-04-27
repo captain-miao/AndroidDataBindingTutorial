@@ -42,6 +42,14 @@
                 <data android:scheme="tutorial" android:host="databinding" android:pathPrefix="/activity_c" />
             </intent-filter>
         </activity>
+        <activity android:name="com.github.captain_miao.databinding.tutorial.recycleview.RecycleViewActivity"
+            android:label="@string/Activity_D">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="tutorial" android:host="databinding" android:pathPrefix="/activity_d" />
+            </intent-filter>
+        </activity>
 
 
 

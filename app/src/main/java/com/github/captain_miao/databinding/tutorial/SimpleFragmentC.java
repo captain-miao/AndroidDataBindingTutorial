@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import com.github.captain_miao.databinding.tutorial.base.BaseFragment;
 import com.github.captain_miao.databinding.tutorial.databinding.LoadImageByPicassoBinding;
-import com.github.captain_miao.databinding.tutorial.helper.ImageUrls;
+import com.github.captain_miao.databinding.tutorial.helper.MockRandomData;
 
 /**
  * @author YanLu
@@ -38,7 +38,7 @@ public class SimpleFragmentC extends BaseFragment implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
-        mBinding.setImgUrl(ImageUrls.getRandomImage());
+        mBinding.setImgUrl(MockRandomData.getRandomImage());
     }
 
 }

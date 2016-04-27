@@ -2,4 +2,25 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">24dp</dimen>
     <dimen name="activity_vertical_margin">24dp</dimen>
+
+
+    <dimen name="padding_big">32dp</dimen>
+    <dimen name="padding_normal">16dp</dimen>
+    <dimen name="padding_middle">12.5dp</dimen>
+    <dimen name="padding_mini">8dp</dimen>
+    <dimen name="padding_mini_half">4dp</dimen>
+
+
+
+    <dimen name="font_size_xlarge">40sp</dimen>
+    <dimen name="font_size_large">30sp</dimen>
+    <dimen name="font_size_headline">24sp</dimen>
+    <dimen name="font_size_title">20sp</dimen>
+    <dimen name="font_size_secondary_title">18sp</dimen>
+    <dimen name="font_size_subhead">16sp</dimen>
+    <dimen name="font_size_body">14sp</dimen>
+    <dimen name="font_size_caption">12sp</dimen>
+    <dimen name="font_size_menu">14sp</dimen>
+    <dimen name="font_size_button">14sp</dimen>
+    <dimen name="font_size_mini">10sp</dimen>
 </resources>

@@ -34,4 +34,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile "com.android.support:design:${this.supportLibrariesVersion}"
     compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.github.captain-miao:recyclerviewutils:1.1.9'
 }

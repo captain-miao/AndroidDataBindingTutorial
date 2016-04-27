@@ -25,7 +25,7 @@ subprojects {
     ext.compileSdkVersion = 23
     ext.buildToolsVersion = '23.0.3'
     ext.supportLibrariesVersion = '23.3.0'
-    ext.minSdkVersion = '7'
+    ext.minSdkVersion = '14'
     ext.targetSdkVersion = '23'
 
 

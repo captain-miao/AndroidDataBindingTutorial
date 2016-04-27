@@ -5,9 +5,9 @@ DataBinding can do lots of things...
 The following features is presented:
 ```
 Simple usage in Activity(clickListener,map)
-loadImage(ImageView imageView, String url, Drawable error)
-data binding in Fragment
-//Usage in Recyclerview
+LoadImage(ImageView imageView, String url, Drawable error)
+Data binding in Fragment
+Data binding in Recyclerview
 //Observable implementation
 
 ```

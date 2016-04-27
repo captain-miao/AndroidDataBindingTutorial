@@ -33,5 +33,10 @@
                  bind:actInfo="@{map[`with_fragment`]}"
                  bind:clickListener="@{clickListener}"
                  />
+
+        <include layout="@layout/activity_item_view"
+                 bind:actInfo="@{map[`with_recycle_view`]}"
+                 bind:clickListener="@{clickListener}"
+                 />
     </LinearLayout>
 </layout>

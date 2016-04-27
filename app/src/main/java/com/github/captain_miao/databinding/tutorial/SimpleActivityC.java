@@ -9,6 +9,8 @@ public class SimpleActivityC extends BaseActivity {
     @Override
     public void init(Bundle savedInstanceState) {
         setContentView(R.layout.fragment_simple);
-        addFragment(R.id.frg_container, SimpleFragmentC.class);
+        if (savedInstanceState == null) {
+            addFragment(R.id.frg_container, SimpleFragmentC.class);
+        }
     }
 }

@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">DataBinding</string>
+
+    <!-- activity list -->
     <string name="Activity_A">Change Text Color</string>
     <string name="Activity_B">Load Image</string>
     <string name="Activity_C">With Fragment</string>
+    <string name="Activity_D">With Recycle View</string>
+
+
+
+
+    <!-- string for label -->
+    <string name="default_label">[Default]</string>
 </resources>
