@@ -48,5 +48,6 @@ public class MainActivity extends AppCompatActivity implements OnViewClickListen
         put("change_image", new ActInfo("change_image", "tutorial://databinding/activity_b"));
         put("with_fragment", new ActInfo("with_fragment", "tutorial://databinding/activity_c"));
         put("with_recycle_view", new ActInfo("with_recycle_view", "tutorial://databinding/activity_d"));
+        put("with_view_page", new ActInfo("with_view_page", "tutorial://databinding/activity_e"));
     }};
 }

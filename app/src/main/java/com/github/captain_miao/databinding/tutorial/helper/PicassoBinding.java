@@ -48,6 +48,12 @@ public class PicassoBinding {
 
         //Picasso.with(imageView.getContext()).load(url).into(imageView);
     }
+
+    @BindingAdapter({"android:src"})
+    public static void setImageViewResource(ImageView imageView, int resource) {
+        imageView.setImageResource(resource);
+    }
+
 //    @BindingAdapter({"imageUrl", "error", "android:clickable"})
 //    public static void imageLoader(ImageView imageView, String url, Drawable error, boolean clickable) {
 //        Picasso.Builder builder = new Picasso.Builder(imageView.getContext());

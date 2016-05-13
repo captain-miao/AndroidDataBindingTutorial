@@ -38,5 +38,10 @@
                  bind:actInfo="@{map[`with_recycle_view`]}"
                  bind:clickListener="@{clickListener}"
                  />
+
+        <include layout="@layout/activity_item_view"
+                 bind:actInfo="@{map[`with_view_page`]}"
+                 bind:clickListener="@{clickListener}"
+                 />
     </LinearLayout>
 </layout>

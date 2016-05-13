@@ -54,15 +54,15 @@ public class VehicleListAdapter extends BaseWrapperRecyclerAdapter<VehicleInfo, 
 
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private ViewDataBinding binding;
+        private ViewDataBinding mBinding;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            binding = DataBindingUtil.bind(itemView);
+            mBinding = DataBindingUtil.bind(itemView);
         }
 
         public ViewDataBinding getBinding() {
-            return binding;
+            return mBinding;
         }
     }
 

@@ -11,6 +11,15 @@
     </style>
 
 
+    <style name="AppFullTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowFullscreen">true</item>
+
+        <item name="android:windowAnimationStyle">@style/AppActivityAnimations</item>
+    </style>
+
     <style name="AppActivityAnimations">
         <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
         <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
