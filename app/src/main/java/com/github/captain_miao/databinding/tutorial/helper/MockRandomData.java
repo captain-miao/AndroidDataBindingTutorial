@@ -1,8 +1,11 @@
 package com.github.captain_miao.databinding.tutorial.helper;
 
+import android.databinding.ObservableArrayList;
 import android.databinding.ObservableBoolean;
 import android.graphics.Color;
 
+import com.github.captain_miao.databinding.tutorial.model.BaseObservableVehicleInfo;
+import com.github.captain_miao.databinding.tutorial.model.ObservableVehicleInfo;
 import com.github.captain_miao.databinding.tutorial.model.VehicleInfo;
 
 import java.security.SecureRandom;
@@ -36,6 +39,20 @@ public class MockRandomData {
 
     public static List<VehicleInfo> getVehicleInfos(){
         return sVehicleInfos;
+    }
+    public static List<ObservableVehicleInfo> getObservableVehicleInfos(){
+        ObservableArrayList<ObservableVehicleInfo> vehicleInfos = new ObservableArrayList<>();
+        for (VehicleInfo vehicleInfo : sVehicleInfos) {
+            vehicleInfos.add(new ObservableVehicleInfo(vehicleInfo));
+        }
+        return vehicleInfos;
+    }
+    public static List<BaseObservableVehicleInfo> getBaseObservableVehicleInfos(){
+        List<BaseObservableVehicleInfo> vehicleInfos = new ArrayList<>();
+        for (VehicleInfo vehicleInfo : sVehicleInfos) {
+            vehicleInfos.add(new BaseObservableVehicleInfo(vehicleInfo));
+        }
+        return vehicleInfos;
     }
 
     private static List<VehicleInfo> sVehicleInfos = new ArrayList<VehicleInfo>(){{

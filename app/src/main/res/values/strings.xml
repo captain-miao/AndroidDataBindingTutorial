@@ -7,6 +7,8 @@
     <string name="Activity_C">With Fragment</string>
     <string name="Activity_D">With Recycle View</string>
     <string name="Activity_E">With View Page</string>
+    <string name="Activity_F">With BaseObservable</string>
+    <string name="Activity_G">With Observable</string>
 
 
 

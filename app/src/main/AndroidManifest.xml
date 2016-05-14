@@ -91,6 +91,32 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".recycleview.BaseObservableRecycleViewActivity"
+            android:label="@string/Activity_F"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:host="databinding"
+                    android:pathPrefix="/activity_f"
+                    android:scheme="tutorial"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".recycleview.ObservableRecycleViewActivity"
+            android:label="@string/Activity_G"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:host="databinding"
+                    android:pathPrefix="/activity_g"
+                    android:scheme="tutorial"/>
+            </intent-filter>
+        </activity>
 
 
     </application>
