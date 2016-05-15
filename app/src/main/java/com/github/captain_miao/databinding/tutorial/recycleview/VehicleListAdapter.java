@@ -72,7 +72,7 @@ public class VehicleListAdapter extends BaseWrapperRecyclerAdapter<VehicleInfo, 
         public void onClick(View v) {
             RecyclerItemViewBinding binding = DataBindingUtil.findBinding(v);
             VehicleInfo data = binding.getInfo();
-            Toast.makeText(v.getContext(), data.getBrand(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(v.getContext(), data.brand, Toast.LENGTH_SHORT).show();
 
         }
     };
@@ -84,12 +84,12 @@ public class VehicleListAdapter extends BaseWrapperRecyclerAdapter<VehicleInfo, 
             RecyclerItemViewBinding binding = DataBindingUtil.findBinding(v);
                VehicleInfo data = binding.getInfo();
                for(VehicleInfo e : getList()){
-                   if(e.getIsSelected().get()) {
-                       e.getIsSelected().set(false);
+                   if(e.isSelected.get()) {
+                       e.isSelected.set(false);
                        break;
                    }
                }
-               data.getIsSelected().set(true);
+               data.isSelected.set(true);
         }
     };
 }

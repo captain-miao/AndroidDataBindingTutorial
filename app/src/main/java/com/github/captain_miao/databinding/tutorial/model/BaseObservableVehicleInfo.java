@@ -24,10 +24,10 @@ public class BaseObservableVehicleInfo extends BaseObservable {
     }
 
     public BaseObservableVehicleInfo(VehicleInfo vehicleInfo) {
-        this.isSelected = vehicleInfo.getIsSelected().get();
-        this.logoUrl = vehicleInfo.getLogoUrl();
-        this.brand = vehicleInfo.getBrand();
-        this.description = vehicleInfo.getDescription();
+        this.isSelected = vehicleInfo.isSelected.get();
+        this.logoUrl = vehicleInfo.logoUrl;
+        this.brand = vehicleInfo.brand;
+        this.description = vehicleInfo.description;
     }
 
     @Bindable
