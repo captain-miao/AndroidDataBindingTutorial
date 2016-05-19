@@ -15,6 +15,13 @@ Data binding with implements Observable
 
 ```
 
+# good practices
+``` xml
+android:onClick="@{() -> onClickEvent.onClick()}"
+
+android:onCheckedChanged="@{(cb, isChecked) -> presenter.completeChanged(t, isChecked)}"
+```
+
 ### Data binding in Recyclerview 
 ![data-binding-recycle-view](https://raw.githubusercontent.com/captain-miao/me.github.com/master/databinding/data-binding-recycle-view.gif "data-binding-recycle-view")
 

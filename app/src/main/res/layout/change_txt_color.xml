@@ -2,6 +2,8 @@
 <layout  xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+        <import type="com.github.captain_miao.databinding.tutorial.presenter.OnClickEvent"/>
+        <variable name="onClickEvent" type="OnClickEvent"/>
         <variable name="txtColor" type="int"/>
     </data>
 
@@ -20,12 +22,12 @@
             android:text="DataBinding Color"/>
 
         <Button
-            android:id="@+id/btn_change_color"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/activity_horizontal_margin"
-            android:text="Change Color"/>
+            android:text="Change Color"
+            android:onClick="@{() -> onClickEvent.onClick()}"/>
 
     </LinearLayout>
 
