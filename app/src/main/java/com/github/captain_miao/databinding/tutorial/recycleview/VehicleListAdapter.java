@@ -10,8 +10,6 @@ import android.widget.Toast;
 
 import com.github.captain_miao.databinding.tutorial.BR;
 import com.github.captain_miao.databinding.tutorial.R;
-import com.github.captain_miao.databinding.tutorial.databinding.RecyclerItemViewBinding;
-import com.github.captain_miao.databinding.tutorial.listener.OnViewClickListener;
 import com.github.captain_miao.databinding.tutorial.model.VehicleInfo;
 import com.github.captain_miao.recyclerviewutils.BaseWrapperRecyclerAdapter;
 
@@ -66,30 +64,26 @@ public class VehicleListAdapter extends BaseWrapperRecyclerAdapter<VehicleInfo, 
         }
     }
 
-    OnViewClickListener itemListener = new OnViewClickListener() {
-
+    OnClickVehicleItem itemListener = new OnClickVehicleItem<VehicleInfo>() {
         @Override
-        public void onClick(View v) {
-            RecyclerItemViewBinding binding = DataBindingUtil.findBinding(v);
-            VehicleInfo data = binding.getInfo();
+        public void onClick(View v, VehicleInfo data) {
             Toast.makeText(v.getContext(), data.brand, Toast.LENGTH_SHORT).show();
-
         }
     };
 
-    OnViewClickListener selectedListener = new OnViewClickListener() {
+    OnClickVehicleItem selectedListener = new OnClickVehicleItem<VehicleInfo>() {
 
         @Override
-        public void onClick(View v) {
-            RecyclerItemViewBinding binding = DataBindingUtil.findBinding(v);
-               VehicleInfo data = binding.getInfo();
-               for(VehicleInfo e : getList()){
-                   if(e.isSelected.get()) {
-                       e.isSelected.set(false);
-                       break;
-                   }
-               }
-               data.isSelected.set(true);
+        public void onClick(View v, VehicleInfo data) {
+            for(VehicleInfo e : getList()){
+                if(e.isSelected.get()) {
+                    e.isSelected.set(false);
+                    break;
+                }
+            }
+            data.isSelected.set(true);
         }
+
+
     };
 }

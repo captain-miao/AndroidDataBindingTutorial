@@ -18,7 +18,7 @@ Data binding with implements Observable
 # good practices
 ``` xml
 android:onClick="@{() -> onClickEvent.onClick()}"
-
+android:onClick="@{(v) -> selectedCLick.onClick(v, info)}"
 android:onCheckedChanged="@{(cb, isChecked) -> presenter.completeChanged(t, isChecked)}"
 ```
 
