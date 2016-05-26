@@ -2,33 +2,60 @@
 <layout  xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+        <import type="android.view.View"/>
         <import type="com.github.captain_miao.databinding.tutorial.presenter.OnClickEvent"/>
         <variable name="onClickEvent" type="OnClickEvent"/>
         <variable name="txtColor" type="int"/>
     </data>
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:text="DataBinding Color"
+                android:textColor="@{txtColor != 0 ? txtColor : @color/colorPrimary}"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:onClick="@{() -> onClickEvent.onClick()}"
+                android:text="Change Color"/>
+
+        </LinearLayout>
 
         <TextView
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_margin="@dimen/activity_horizontal_margin"
-            android:textColor="@{txtColor != 0 ? txtColor : @color/colorPrimary}"
-            android:text="DataBinding Color"/>
-
-        <Button
-            android:layout_gravity="center_vertical"
+            android:id="@+id/tv_first"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_margin="@dimen/activity_horizontal_margin"
-            android:text="Change Color"
-            android:onClick="@{() -> onClickEvent.onClick()}"/>
+            android:text="It's Visible or Gone"
+            android:textColor="@{txtColor != 0 ? txtColor : @color/colorPrimary}"
+            android:visibility="@{txtColor %2 == 0 ? View.GONE : View.VISIBLE }"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="It's Visible or Gone follow above"
+            android:textColor="@{txtColor != 0 ? txtColor : @color/colorPrimary}"
+            android:visibility="@{tvFirst.visibility}"/>
     </LinearLayout>
 
 </layout>
