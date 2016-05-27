@@ -2,6 +2,7 @@
 DataBinding can do lots of things...
 
 # [Advanced Data Binding - Google I/O 2016](https://www.youtube.com/watch?v=DAmMN7m3wLU)
+## [DataBindingTutorial-CN](https://yanlu.me/android-databinding-tutorial-00/)
 
 # Feature
 The following features is presented:
