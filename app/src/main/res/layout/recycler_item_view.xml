@@ -12,11 +12,11 @@
             type="VehicleInfo"/>
 
         <variable
-            name="itemCLick"
+            name="itemClick"
             type="OnClickVehicleItem"/>
 
         <variable
-            name="selectedCLick"
+            name="selectedClick"
             type="OnClickVehicleItem"/>
 
     </data>
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/padding_middle"
         android:background="@color/white"
-        android:onClick="@{(v) -> itemCLick.onClick(v, info)}"
+        android:onClick="@{(v) -> itemClick.onClick(v, info)}"
         android:orientation="vertical">
 
 
@@ -76,7 +76,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:onClick="@{(v) -> selectedCLick.onClick(v, info)}"
+                android:onClick="@{(v) -> selectedClick.onClick(v, info)}"
                 android:orientation="vertical"
                 android:paddingLeft="@dimen/padding_mini"
                 android:paddingRight="@dimen/padding_mini"
