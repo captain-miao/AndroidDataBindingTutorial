@@ -4,6 +4,19 @@ DataBinding can do lots of things...
 # [Advanced Data Binding - Google I/O 2016](https://www.youtube.com/watch?v=DAmMN7m3wLU)
 ## [DataBindingTutorial-CN](https://yanlu.me/android-databinding-tutorial-00/)
 
+# WARNING
+* include layout only support one data  
+```
+    // Error:Only one layout element and one data element are allowed.  
+    
+    <include layout="@layout/rv_item_view"  
+        app:user="@{user}"  
+        app:presenter="@{presenter}"/>
+    >
+```
+* Data Binding does not support Jack
+> Error:Data Binding does not support Jack builds yet  
+
 # Feature
 The following features is presented:
 ```
