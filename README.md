@@ -30,6 +30,10 @@ android:onCheckedChanged="@{(cb, isChecked) -> presenter.completeChanged(t, isCh
 <!-- view with the id as a variable -->
 android:visibility="@{tvView.visibility}"
 
+<import type="android.databinding.ObservableBoolean"/>
+<variable name="isVisible" type="ObservableBoolean"/>
+// use isVisible.get the value
+app:isVisibleOrGone="@{!(isVisible.get)}
 ```
 
 ### Data binding in RecyclerView 
