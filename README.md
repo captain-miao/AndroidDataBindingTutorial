@@ -34,6 +34,9 @@ android:visibility="@{tvView.visibility}"
 <variable name="isVisible" type="ObservableBoolean"/>
 // use isVisible.get the value
 app:isVisibleOrGone="@{!(isVisible.get)}
+
+<!-- Expression Language: and &&  -->
+app:isVisibleOrGone="@{!TextUtils.isEmpty(order.userRealName) &amp;&amp; isVisible}"
 ```
 
 ### Data binding in RecyclerView 
