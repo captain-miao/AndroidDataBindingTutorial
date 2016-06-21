@@ -56,6 +56,13 @@
             android:text="It's Visible or Gone follow above"
             android:textColor="@{txtColor != 0 ? txtColor : @color/colorPrimary}"
             android:visibility="@{tvFirst.visibility}"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="It's always Visible"
+            android:textColor="@color/colorPrimary"/>
     </LinearLayout>
 
 </layout>

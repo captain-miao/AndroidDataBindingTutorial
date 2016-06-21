@@ -1,7 +1,10 @@
 package com.github.captain_miao.databinding.tutorial.helper;
 
 import android.databinding.BindingAdapter;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 /**
  * @author YanLu
@@ -17,6 +20,20 @@ public class ViewVisibleBindingAdapter {
     @BindingAdapter("isInvisible")
     public static void setIsInvisible(View view, boolean hide){
       view.setVisibility(hide ? View.INVISIBLE : View.VISIBLE);
+    }
+
+    @BindingAdapter({"textFlags"})
+    public static void setTextViewFlag(TextView textView, int flags) {
+        textView.getPaint().setFlags(flags);
+    }
+
+    @BindingAdapter({"editTextSelection"})
+    public static void setEditTextSelection(EditText editText, String text) {
+        if(!TextUtils.isEmpty(text)) {
+            editText.setSelection(Math.max(0, text.length()));
+        } else {
+            editText.setSelection(0);
+        }
     }
 
 }

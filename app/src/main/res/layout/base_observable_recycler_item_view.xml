@@ -4,7 +4,7 @@
 
     <data>
         <import type="com.github.captain_miao.databinding.tutorial.model.BaseObservableVehicleInfo" />
-        <import type="com.github.captain_miao.databinding.tutorial.listener.OnViewClickListener"/>
+        <import type="com.github.captain_miao.databinding.tutorial.recycleview.OnClickVehicleItem"/>
         <import type="android.view.View"/>
 
         <variable
@@ -12,12 +12,12 @@
             type="BaseObservableVehicleInfo"/>
 
         <variable
-            name="itemCLick"
-            type="OnViewClickListener"/>
+            name="itemClick"
+            type="OnClickVehicleItem"/>
 
         <variable
-            name="selectedCLick"
-            type="OnViewClickListener"/>
+            name="selectedClick"
+            type="OnClickVehicleItem"/>
 
     </data>
 
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/padding_middle"
         android:background="@color/white"
-        android:onClick="@{itemCLick.onClick}"
+        android:onClick="@{(v) -> itemClick.onClick(v, info)}"
         android:orientation="vertical">
 
 
@@ -76,7 +76,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:onClick="@{selectedCLick.onClick}"
+                android:onClick="@{(v) -> selectedClick.onClick(v, info)}"
                 android:orientation="vertical"
                 android:paddingLeft="@dimen/padding_mini"
                 android:paddingRight="@dimen/padding_mini"

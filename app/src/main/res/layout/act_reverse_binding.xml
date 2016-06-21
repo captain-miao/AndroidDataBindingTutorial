@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.github.captain_miao.databinding.tutorial.presenter.PresenterValue"/>
+        <variable name="presenter" type="PresenterValue"/>
+
+        <variable name="defValue" type="String"/>
+        <variable name="initValue" type="String"/>
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{defValue}"
+            android:textColor="@color/colorPrimary"
+            android:layout_margin="@dimen/activity_vertical_margin"/>
+
+        <EditText
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={defValue}"
+            app:editTextSelection="@{initValue}"
+            android:textColor="@color/guide_bg_color_3"
+            android:layout_margin="@dimen/activity_vertical_margin"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:onClick="@{() -> presenter.onValue(defValue)}"
+            android:text="Show Input"/>
+
+    </LinearLayout>
+
+</layout>

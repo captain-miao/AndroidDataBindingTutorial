@@ -6,7 +6,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.github.captain_miao.databinding.tutorial.BR;
 import com.github.captain_miao.databinding.tutorial.R;
@@ -22,10 +21,13 @@ import java.util.List;
  */
 public class VehicleListAdapter extends BaseWrapperRecyclerAdapter<VehicleInfo, RecyclerView.ViewHolder> {
 
+    RvPresenter mPresenter;
+
     public VehicleListAdapter() {
     }
 
-    public VehicleListAdapter(List<VehicleInfo> items) {
+    public VehicleListAdapter(List<VehicleInfo> items, RvPresenter presenter) {
+        mPresenter = presenter;
         addAll(items);
     }
 
@@ -43,8 +45,7 @@ public class VehicleListAdapter extends BaseWrapperRecyclerAdapter<VehicleInfo, 
         if(holder instanceof ViewHolder){
             ViewDataBinding binding = ((ViewHolder) holder).getBinding();
             binding.setVariable(BR.info, info);
-            binding.setVariable(BR.itemCLick, itemListener);
-            binding.setVariable(BR.selectedCLick, selectedListener);
+            binding.setVariable(BR.presenter, mPresenter);
             binding.executePendingBindings();
         }
     }
@@ -64,26 +65,4 @@ public class VehicleListAdapter extends BaseWrapperRecyclerAdapter<VehicleInfo, 
         }
     }
 
-    OnClickVehicleItem itemListener = new OnClickVehicleItem<VehicleInfo>() {
-        @Override
-        public void onClick(View v, VehicleInfo data) {
-            Toast.makeText(v.getContext(), data.brand, Toast.LENGTH_SHORT).show();
-        }
-    };
-
-    OnClickVehicleItem selectedListener = new OnClickVehicleItem<VehicleInfo>() {
-
-        @Override
-        public void onClick(View v, VehicleInfo data) {
-            for(VehicleInfo e : getList()){
-                if(e.isSelected.get()) {
-                    e.isSelected.set(false);
-                    break;
-                }
-            }
-            data.isSelected.set(true);
-        }
-
-
-    };
 }

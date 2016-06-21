@@ -10,8 +10,6 @@ import android.widget.Toast;
 
 import com.github.captain_miao.databinding.tutorial.BR;
 import com.github.captain_miao.databinding.tutorial.R;
-import com.github.captain_miao.databinding.tutorial.databinding.BaseObservableRecyclerItemViewBinding;
-import com.github.captain_miao.databinding.tutorial.listener.OnViewClickListener;
 import com.github.captain_miao.databinding.tutorial.model.BaseObservableVehicleInfo;
 import com.github.captain_miao.recyclerviewutils.BaseWrapperRecyclerAdapter;
 
@@ -42,13 +40,11 @@ public class BaseObservableVehicleListAdapter extends BaseWrapperRecyclerAdapter
     @Override
     public void onBindItemViewHolder(RecyclerView.ViewHolder holder, int position) {
         final BaseObservableVehicleInfo info = getItem(position);
-        if(holder instanceof ViewHolder){
-            ViewDataBinding binding = ((ViewHolder) holder).getBinding();
-            binding.setVariable(BR.info, info);
-            binding.setVariable(BR.itemCLick, itemListener);
-            binding.setVariable(BR.selectedCLick, selectedListener);
-            binding.executePendingBindings();
-        }
+        ViewDataBinding binding = ((ViewHolder) holder).getBinding();
+        binding.setVariable(BR.info, info);
+        binding.setVariable(BR.itemClick, itemListener);
+        binding.setVariable(BR.selectedClick, selectedListener);
+        binding.executePendingBindings();
     }
 
 
@@ -66,30 +62,28 @@ public class BaseObservableVehicleListAdapter extends BaseWrapperRecyclerAdapter
         }
     }
 
-    OnViewClickListener itemListener = new OnViewClickListener() {
-
+    OnClickVehicleItem itemListener = new OnClickVehicleItem<BaseObservableVehicleInfo>() {
         @Override
-        public void onClick(View v) {
-            BaseObservableRecyclerItemViewBinding binding = DataBindingUtil.findBinding(v);
-            BaseObservableVehicleInfo data = binding.getInfo();
+        public void onClick(View v, BaseObservableVehicleInfo data) {
             Toast.makeText(v.getContext(), data.getBrand(), Toast.LENGTH_SHORT).show();
-
         }
     };
 
-    OnViewClickListener selectedListener = new OnViewClickListener() {
+    OnClickVehicleItem selectedListener = new OnClickVehicleItem<BaseObservableVehicleInfo>() {
 
         @Override
-        public void onClick(View v) {
-            BaseObservableRecyclerItemViewBinding binding = DataBindingUtil.findBinding(v);
-            BaseObservableVehicleInfo data = binding.getInfo();
-               for(BaseObservableVehicleInfo e : getList()){
-                   if(e.getIsSelected()) {
-                       e.setIsSelected(false);
-                       break;
-                   }
-               }
+        public void onClick(View v, BaseObservableVehicleInfo data) {
+            for(BaseObservableVehicleInfo e : getList()){
+                if(e.getIsSelected()) {
+                    e.setIsSelected(false);
+                    break;
+                }
+            }
             data.setIsSelected(true);
         }
+
+
     };
+
+
 }

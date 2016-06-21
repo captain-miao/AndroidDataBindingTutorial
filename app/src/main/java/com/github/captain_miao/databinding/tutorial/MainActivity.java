@@ -51,5 +51,6 @@ public class MainActivity extends AppCompatActivity implements OnViewClickListen
         put("with_view_page", new ActInfo("with_view_page", "tutorial://databinding/activity_e"));
         put("with_base_observable", new ActInfo("with_base_observable", "tutorial://databinding/activity_f"));
         put("with_observable", new ActInfo("with_observable", "tutorial://databinding/activity_g"));
+        put("reverse_binding", new ActInfo("reverse_binding", "tutorial://databinding/activity_h"));
     }};
 }

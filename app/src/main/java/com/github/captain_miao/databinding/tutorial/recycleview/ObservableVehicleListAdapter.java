@@ -45,8 +45,8 @@ public class ObservableVehicleListAdapter extends BaseWrapperRecyclerAdapter<Obs
         if(holder instanceof ViewHolder){
             ViewDataBinding binding = ((ViewHolder) holder).getBinding();
             binding.setVariable(BR.info, info);
-            binding.setVariable(BR.itemCLick, itemListener);
-            binding.setVariable(BR.selectedCLick, selectedListener);
+            binding.setVariable(BR.itemClick, itemListener);
+            binding.setVariable(BR.selectedClick, selectedListener);
             binding.executePendingBindings();
         }
     }

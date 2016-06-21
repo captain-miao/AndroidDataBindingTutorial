@@ -9,6 +9,7 @@
     <string name="Activity_E">With View Page</string>
     <string name="Activity_F">With BaseObservable</string>
     <string name="Activity_G">With Observable</string>
+    <string name="Activity_H">Reverse Binding</string>
 
 
 

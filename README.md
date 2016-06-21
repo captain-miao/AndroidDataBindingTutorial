@@ -19,13 +19,13 @@ Data binding in ViewPage
 Data binding with ObservableField
 Data binding with extends BaseObservable
 Data binding with implements Observable
-
+Reverse Data Binding
 ```
 
 # good practices
 ``` xml
 android:onClick="@{() -> onClickEvent.onClick()}"
-android:onClick="@{(v) -> selectedCLick.onClick(v, info)}"
+android:onClick="@{(v) -> selectedClick.onClick(v, info)}"
 android:onCheckedChanged="@{(cb, isChecked) -> presenter.completeChanged(t, isChecked)}"
 <!-- view with the id as a variable -->
 android:visibility="@{tvView.visibility}"
@@ -36,7 +36,10 @@ android:visibility="@{tvView.visibility}"
 app:isVisibleOrGone="@{!(isVisible.get)}
 
 <!-- Expression Language: and &&  -->
-app:isVisibleOrGone="@{!TextUtils.isEmpty(order.userRealName) &amp;&amp; isVisible}"
+app:isVisibleOrGone="@{!TextUtils.isEmpty(userName) &amp;&amp; isVisible}"
+
+<!-- 2-way Data Binding -->
+android:text="@={defValue}"
 ```
 
 ### Data binding in RecyclerView 
