@@ -16,6 +16,7 @@
 
     <!-- string for label -->
     <string name="default_label">[Default]</string>
+    <string name="limit__input_label">Limit input field to numbers only with two decimal points</string>
 
 
     <!-- guide -->

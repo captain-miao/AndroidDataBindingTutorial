@@ -4,10 +4,14 @@
 
     <data>
         <import type="com.github.captain_miao.databinding.tutorial.presenter.PresenterValue"/>
+        <import type="com.github.captain_miao.databinding.tutorial.helper.DecimalFilter"/>
+
         <variable name="presenter" type="PresenterValue"/>
 
         <variable name="defValue" type="String"/>
         <variable name="initValue" type="String"/>
+
+        <variable name="limitInput" type="String"/>
     </data>
 
 
@@ -40,6 +44,39 @@
             android:layout_gravity="center_vertical"
             android:layout_margin="@dimen/activity_horizontal_margin"
             android:onClick="@{() -> presenter.onValue(defValue)}"
+            android:text="Show Input"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="@string/limit__input_label"/>
+        <EditText
+            android:id="@+id/et_limit_input"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:addTextChangedListener="@{DecimalFilter.create(etLimitInput)}"
+            android:text="@={limitInput}"
+            android:textColor="@color/guide_bg_color_3"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:onClick="@{() -> presenter.onValue(limitInput)}"
             android:text="Show Input"/>
 
     </LinearLayout>
