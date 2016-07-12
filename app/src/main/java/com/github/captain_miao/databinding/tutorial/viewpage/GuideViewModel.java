@@ -20,4 +20,8 @@ public class GuideViewModel {
         this.description = description;
         this.imageRes = imageRes;
     }
+
+    public String getOtherTitle(){
+        return title + "_other";
+    }
 }

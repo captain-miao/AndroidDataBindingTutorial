@@ -19,7 +19,7 @@
             android:layout_gravity="center"
             android:textSize="@dimen/font_size_title"
             android:textColor="@color/white"
-            android:text="@{viewModel.title, default=@string/guide_title_1}"/>
+            android:text="@{viewModel.otherTitle, default=@string/guide_title_1}"/>
 
         <TextView
             android:layout_marginTop="@dimen/margin_big"
