@@ -6,6 +6,7 @@
         <import type="com.github.captain_miao.databinding.tutorial.presenter.OnClickEvent"/>
         <variable name="onClickEvent" type="OnClickEvent"/>
         <variable name="txtColor" type="int"/>
+        <variable name="paddingLeft" type="int"/>
     </data>
 
 
@@ -20,6 +21,8 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tv_content"
+                android:paddingLeft="@{paddingLeft}"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"

@@ -15,7 +15,7 @@ public class SimpleActivityA extends BaseActivity implements OnClickEvent {
     @Override
     public void init(Bundle savedInstanceState) {
         mBinding = DataBindingUtil.setContentView(this, R.layout.change_txt_color);
-
+        mBinding.setPaddingLeft(20);
         mBinding.setOnClickEvent(this);
     }
 

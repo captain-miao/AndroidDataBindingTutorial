@@ -36,4 +36,14 @@ public class ViewVisibleBindingAdapter {
         }
     }
 
+
+    @BindingAdapter("android:paddingLeft")
+    public static void setPaddingLeft(View view, int oldPadding, int newPadding) {
+        if (oldPadding != newPadding) {
+            view.setPadding(newPadding,
+                    view.getPaddingTop(),
+                    view.getPaddingRight(),
+                    view.getPaddingBottom());
+        }
+    }
 }
