@@ -91,11 +91,12 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:paddingTop="@dimen/padding_mini_half"
-                    android:text="@string/default_label"
 
+                    android:text='@{info.isSelected ? "选中" : "未选中"}'
                     android:textColor="@{info.isSelected ? @color/text_check : @color/text_un_check}"
                     />
             </LinearLayout>
+                    <!--android:text="@string/default_label"-->
 
         </RelativeLayout>
         <TextView
