@@ -30,9 +30,13 @@ public class ViewVisibleBindingAdapter {
     @BindingAdapter({"editTextSelection"})
     public static void setEditTextSelection(EditText editText, String text) {
         if(!TextUtils.isEmpty(text)) {
-            editText.setSelection(Math.max(0, text.length()));
+            try {
+                editText.setSelection(Math.max(0, text.length()));
+            } catch (Exception e){
+
+            }
         } else {
-            editText.setSelection(0);
+            //editText.setSelection(0);
         }
     }
 
