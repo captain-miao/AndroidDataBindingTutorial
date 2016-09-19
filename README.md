@@ -49,3 +49,7 @@ android:text="@={defValue}"
 ![data-binding-view-page](https://raw.githubusercontent.com/captain-miao/me.github.com/master/databinding/data-binding-view-page.gif "data-binding-view-page")
 
 <br/>
+
+# License
+
+This project is licensed under the terms of the MIT license.
