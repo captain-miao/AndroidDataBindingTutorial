@@ -1,5 +1,6 @@
 package com.github.captain_miao.databinding.tutorial;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -26,7 +27,8 @@ public class SimpleFragmentC extends BaseFragment implements View.OnClickListene
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mBinding = LoadImageByPicassoBinding.inflate(inflater, container, false);
+        //mBinding = LoadImageByPicassoBinding.inflate(inflater, container, false);
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.load_image_by_picasso, container, false);
         return mBinding.getRoot();
     }
 
