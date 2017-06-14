@@ -7,6 +7,14 @@ package com.github.captain_miao.databinding.tutorial.model;
 public class ActInfo extends BaseModel{
     private static final long serialVersionUID = 1L;
 
+
+    public enum ActEnum {
+        ACT_A,
+        ACT_B,
+        ACT_C
+    }
+
+
     private String name;
     private String url;
 

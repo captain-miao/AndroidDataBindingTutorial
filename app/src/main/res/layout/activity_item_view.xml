@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <import type="com.github.captain_miao.databinding.tutorial.model.ActInfo"/>
+        <import type="com.github.captain_miao.databinding.tutorial.model.ActInfo.ActEnum"/>
         <import type="com.github.captain_miao.databinding.tutorial.listener.OnViewClickListener"/>
         <variable name="actInfo" type="ActInfo"/>
+        <variable name="act" type="ActEnum"/>
         <variable name="clickListener" type="OnViewClickListener"/>
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/yanlu"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:padding="@dimen/activity_horizontal_margin"
@@ -18,5 +21,11 @@
             android:layout_height="wrap_content"
             android:text="@{actInfo.name ?? @string/app_name, default=@string/app_name}"
             android:onClick="@{clickListener.onClick}"/>
+
+        <TextView
+            android:text="ActEnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:isGone="@{act == ActEnum.ACT_A}"/>
     </LinearLayout>
 </layout>

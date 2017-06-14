@@ -5,6 +5,7 @@
         <import type="java.util.Map"/>
         <import type="com.github.captain_miao.databinding.tutorial.model.ActInfo"/>
         <import type="com.github.captain_miao.databinding.tutorial.listener.OnViewClickListener"/>
+        <import type="com.github.captain_miao.databinding.tutorial.model.ActInfo.ActEnum"/>
         <variable name="map" type="Map&lt;String,ActInfo>"/>
         <variable name="clickListener" type="OnViewClickListener"/>
     </data>
@@ -30,6 +31,7 @@
 
             <include
                 layout="@layout/activity_item_view"
+                bind:act='@{ActEnum.ACT_A}'
                 bind:actInfo='@{map["change_image"]}'
                 bind:clickListener="@{clickListener}"
                 />
